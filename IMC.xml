@@ -11186,4 +11186,14 @@
     </field>
   </message>
 
+  <message id="2020" name="Group Estimated State" abbrev="GroupEstimatedState" source="ccu,vehicle" category="Navigation">
+    <description>
+      This message contains estimated states from a group of vehicles.
+      The message is used by an external centralized controller to obtain the state of multiple vehicles at once.
+    </description>
+    <field name="Estimated State List" abbrev="estate_list" type="message-list" message-type="EstimatedState">
+      <description>List of state estimates</description>
+    </field>
+  </message>
+
 </messages>

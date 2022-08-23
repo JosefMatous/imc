@@ -11221,4 +11221,22 @@
     </field>
   </message>
 
+  <message id="2022" name="NSB Message" abbrev="NSBMsg" source="vehicle" category="Guidance">
+    <description>
+      This message contains all necessary information for performing the NSB algorithm.
+    </description>
+    <field name="Path Parameter" abbrev="path_param" type="fp64_t">
+      <description>Path parameter (typically distance, angle, etc.)</description>
+    </field>
+    <field name="Barycenter x" abbrev="x" type="fp64_t" unit="m">
+      <description>Barycenter estimate x-position in vehicle's NED frame</description>
+    </field>
+    <field name="Barycenter y" abbrev="y" type="fp64_t" unit="m">
+      <description>Barycenter estimate y-position in vehicle's NED frame</description>
+    </field>
+    <field name="Barycenter z" abbrev="z" type="fp64_t" unit="m">
+      <description>Barycenter estimate z-position in vehicle's NED frame</description>
+    </field>
+  </message>
+
 </messages>

@@ -11200,14 +11200,14 @@
         WGS-84 Longitude coordinate.
       </description>
     </field>
-    <field name="Course Over Ground" abbrev="cog" type="fp32_t" unit="rad">
+    <field name="Velocity x" abbrev="v_x" type="fp32_t" unit="m/s">
       <description>
-        Course Over Ground (true).
+        The x-component of inertial velocity.
       </description>
     </field>
-    <field name="Speed Over Ground" abbrev="sog" type="fp32_t" unit="m/s">
+    <field name="Velocity y" abbrev="v_y" type="fp32_t" unit="m/s">
       <description>
-        Speed Over Ground.
+        The y-component of inertial velocity.
       </description>
     </field>
   </message>

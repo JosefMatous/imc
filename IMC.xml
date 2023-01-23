@@ -11242,4 +11242,25 @@
     </field>
   </message>
 
+  <message id="2023" name="NSB State" abbrev="NSBState" source="vehicle" category="Guidance">
+    <description>
+      NSB state. This message is used for logging purposes.
+    </description>
+    <field name="Path Parameter" abbrev="path_param" type="fp32_t">
+      <description>Path parameter (typically distance, angle, etc.)</description>
+    </field>
+    <field name="Barycenter x" abbrev="x" type="fp32_t" unit="m">
+      <description>Barycenter estimate x-position in vehicle's NED frame</description>
+    </field>
+    <field name="Barycenter y" abbrev="y" type="fp32_t" unit="m">
+      <description>Barycenter estimate y-position in vehicle's NED frame</description>
+    </field>
+    <field name="Barycenter z" abbrev="z" type="fp32_t" unit="m">
+      <description>Barycenter estimate z-position in vehicle's NED frame</description>
+    </field>
+    <field name="Formation Radius" abbrev="r_f" type="fp32_t" unit="m">
+      <description>Estimated formation radius (distance between vehicles and barycenter)</description>
+    </field>
+  </message>
+
 </messages>

@@ -11240,6 +11240,9 @@
     <field name="Formation Radius" abbrev="r_f" type="fp32_t" unit="m">
       <description>Estimated formation radius (distance between vehicles and barycenter)</description>
     </field>
+    <field name="Covariance" abbrev="P" type="fp32_t">
+      <description>Covariance of the estimated NSB state</description>
+    </field>
   </message>
 
   <message id="2023" name="NSB State" abbrev="NSBState" source="vehicle" category="Guidance">
@@ -11260,6 +11263,9 @@
     </field>
     <field name="Formation Radius" abbrev="r_f" type="fp32_t" unit="m">
       <description>Estimated formation radius (distance between vehicles and barycenter)</description>
+    </field>
+    <field name="Covariance" abbrev="P" type="fp32_t">
+      <description>Covariance of the estimated NSB state</description>
     </field>
   </message>
 

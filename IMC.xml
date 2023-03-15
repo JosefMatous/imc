@@ -11193,10 +11193,10 @@
     <field name="Path Parameter" abbrev="path_param" type="fp32_t">
       <description>Path parameter (typically distance, angle, etc.)</description>
     </field>
-    <field name="Barycenter x" abbrev="x" type="fp32_t" unit="m">
+    <field name="Barycenter latitude" abbrev="lat" type="fp64_t" unit="rad">
       <description>Barycenter estimate x-position in vehicle's NED frame</description>
     </field>
-    <field name="Barycenter y" abbrev="y" type="fp32_t" unit="m">
+    <field name="Barycenter longitude" abbrev="lon" type="fp64_t" unit="m">
       <description>Barycenter estimate y-position in vehicle's NED frame</description>
     </field>
     <field name="Barycenter z" abbrev="z" type="fp32_t" unit="m">
@@ -11231,27 +11231,6 @@
     </field>
     <field name="Covariance" abbrev="P" type="fp32_t">
       <description>Covariance of the estimated NSB state</description>
-    </field>
-  </message>
-
-  <message id="2024" name="Obstacle" abbrev="Obstacle" source="vehicle" category="Maneuvering">
-    <description>
-      State of an obstacle. Similar to the Target message, but the obstacle's position is in the vehicle's NED frame.
-    </description>
-    <field name="x position" abbrev="x" type="fp32_t" unit="m">
-      <description>x-position in vehicle's NED frame</description>
-    </field>
-    <field name="y position" abbrev="y" type="fp32_t" unit="m">
-      <description>y-position in vehicle's NED frame</description>
-    </field>
-    <field name="x velocity" abbrev="v_x" type="fp32_t" unit="m">
-      <description>Inertial x-velocity in vehicle's NED frame</description>
-    </field>
-    <field name="y velocity" abbrev="v_y" type="fp32_t" unit="m">
-      <description>Inertial y-velocity in vehicle's NED frame</description>
-    </field>
-    <field name="Clock" abbrev="t" type="fp64_t" unit="s">
-      <description>Timestamp, as given by the vehicle's system clock.</description>
     </field>
   </message>
 

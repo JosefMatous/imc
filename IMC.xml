@@ -11234,4 +11234,30 @@
     </field>
   </message>
 
+  <message id="2024" name="Experiment Control" abbrev="ExperimentControl" source="ccu,vehicle" category="Plan Supervision">
+    <description>
+      Starts/stops an experiment.
+    </description>
+    <field name="Operation" abbrev="op" unit="Enumerated" type="uint8_t" prefix="OP">
+      <description>
+        Indicates whether to start or stop the experiment.
+      </description>
+      <value id="0" name="Stop" abbrev="STOP"/>
+      <value id="1" name="Start" abbrev="START"/>
+    </field>
+    <field name="Experiment" abbrev="experiment" unit="Enumerated" type="uint8_t" prefix="EX">
+      <description>
+        Indicates what type of experiment should be started.
+        This field is ignored when a stop command is issued (i.e., stop will stop any ongoing experiment).
+      </description>
+      <value id="0" name="Curved Path Following" abbrev="PATH_FOLLOWING"/>
+      <value id="1" name="Distributed NSB" abbrev="NSB"/>
+    </field>
+    <field name="Activate Obstacle" abbrev="obstacle" type="uint8_t" unit="Enumerated" enum-def="Boolean">
+      <description>
+        Set to true if obstacle simulator should be enabled.
+      </description>
+    </field>
+  </message>
+
 </messages>

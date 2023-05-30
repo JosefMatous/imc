@@ -11258,6 +11258,12 @@
         Set to true if obstacle simulator should be enabled.
       </description>
     </field>
+    <field name="Delay" abbrev="delay" type="fp64_t" unit="s">
+      <description> 
+        The operation is executed with a given delay. The delay is calculated from the reception of the message.
+        Set this value to zero or negative for no delay.
+      </description>
+    </field>
   </message>
 
   <message id="2025" name="NSB Parameters" abbrev="NSBParameters" source="vehicle,ccu" category="Guidance">

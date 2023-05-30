@@ -11260,4 +11260,71 @@
     </field>
   </message>
 
+  <message id="2025" name="NSB Parameters" abbrev="NSBParameters" source="vehicle,ccu" category="Guidance">
+    <description>
+      Parameters of the NSB experiment that are shared among multiple vehicles.
+    </description>
+    <field name="Path Latitude" abbrev="path_lat" type="fp64_t" unit="rad"> </field>
+    <field name="Path Longitude" abbrev="path_lon" type="fp64_t" unit="rad"> </field>
+    <field name="Path Depth" abbrev="path_z" type="fp64_t" unit="m"> </field>
+    <field name="Path Semimajor Axis" abbrev="path_a" type="fp64_t" unit="m"> </field>
+    <field name="Path Semiminor Axis" abbrev="path_b" type="fp64_t" unit="m"> </field>
+    <field name="Path Z Amplitude" abbrev="path_c" type="fp64_t" unit="m"> </field>
+    <field name="Path Clockwise" abbrev="path_clockwise" type="uint8_t" unit="Enumerated" enum-def="Boolean"> </field>
+    <field name="Path Orientation" abbrev="path_psi" type="fp64_t" unit="rad"> </field>
+    <field name="Path Z Frequency" abbrev="path_z_freq" type="fp64_t"> </field>
+    <field name="Path Initial Phase" abbrev="path_phi0" type="fp64_t" unit="rad"> </field>
+    <field name="Path Z Initial Phase" abbrev="path_z_phi0" type="fp64_t" unit="rad"> </field>
+    <field name="LOS Lookahead Distance" abbrev="los_lookahead" type="fp64_t" unit="m"> </field>
+    <field name="LOS Speed" abbrev="los_speed" type="fp64_t" unit="m/s"> </field>
+    <field name="LOS Update Gain" abbrev="los_gain" type="fp64_t"> </field>
+    <field name="LOS Adaptive" abbrev="los_adaptive" type="uint8_t" unit="Enumerated" enum-def="Boolean"> </field>
+    <field name="Formation x" abbrev="form_x" type="fp64_t" unit="m"> </field>
+    <field name="Formation y" abbrev="form_y" type="fp64_t" unit="m"> </field>
+    <field name="Formation z" abbrev="form_z" type="fp64_t" unit="m"> </field>
+    <field name="Formation Maximum Speed" abbrev="form_max_speed" type="fp64_t" unit="m/s"> </field>
+    <field name="Formation Keeping Gain" abbrev="form_gain" type="fp64_t"> </field>
+    <field name="Obstacle Avoidance Radius" abbrev="oa_radius" type="fp64_t" unit="m"> </field>
+    <field name="Collision Cone Angle" abbrev="oa_cone" type="fp64_t" unit="rad"> </field>
+    <field name="Obstacle Avoidance Hysteresis" abbrev="oa_hysteresis" type="fp64_t" unit="rad"> </field>
+    <field name="Obstacle Latitude" abbrev="obs_lat" type="fp64_t" unit="rad"> </field>
+    <field name="Obstacle Longitude" abbrev="obs_lon" type="fp64_t" unit="rad"> </field>
+    <field name="Obstacle Velocity x" abbrev="obs_vx" type="fp64_t" unit="m/s"> </field>
+    <field name="Obstacle Velocity y" abbrev="obs_vy" type="fp64_t" unit="m/s"> </field>
+  </message>
+
+  <message id="2026" name="NSB Parameters Request" abbrev="NSBParametersRequest" source="vehicle,ccu" category="Guidance">
+    <description>
+      Request the transmission of the NSBParameters message.
+    </description>
+  </message>
+
+  <message id="2027" name="Clock Offset" abbrev="ClockOffset" source="vehicle,ccu" category="Networking">
+    <description>
+      Clock offset between two systems.
+    </description>
+    <field name="System" abbrev="system" type="uint16_t">
+      <description>ID of the second system</description>
+    </field>
+    <field name="Offset" abbrev="offset" type="fp64_t" unit="s">
+      <description>Clock offset, calculated as the difference between this system and the second system</description>
+    </field>
+  </message>
+
+  <message id="2028" name="Clock Synchronization Message" abbrev="ClockSync" source="vehicle" category="Networking">
+    <description>
+      Clock synchronization message, used to calculate the clock offset between two systems.
+    </description>
+    <field name="Operation" abbrev="op" unit="Enumerated" type="uint8_t" prefix="OP">
+      <description>
+        Indicates whether this is a request or a reply message.
+      </description>
+      <value id="0" name="Request" abbrev="REQUEST"/>
+      <value id="1" name="Reply" abbrev="REPLY"/>
+    </field>
+    <field name="Request ID" abbrev="id" type="uint16_t">
+      <description>Unique request ID</description>
+    </field>
+  </message>
+
 </messages>

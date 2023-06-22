@@ -11222,4 +11222,15 @@
     </field>
   </message>
 
+  <message id="2021" name="Virtual Target" abbrev="VirtualTarget" source="vehicle" category="Guidance">
+    <description>
+      Packets from the virtual target.
+    </description>
+    <field name="Message" abbrev="msg" type="message" message-type="ConsensusPacket">
+      <description>
+        State of the virtual target.
+      </description>
+    </field>
+  </message>
+
 </messages>

@@ -11200,6 +11200,11 @@
         WGS-84 Longitude coordinate.
       </description>
     </field>
+    <field name="Depth" abbrev="z" type="fp32_t" unit="m">
+      <description>
+        Depth (z-coordinate).
+      </description>
+    </field>
     <field name="Velocity x" abbrev="v_x" type="fp32_t" unit="m/s">
       <description>
         The x-component of inertial velocity.
@@ -11208,6 +11213,11 @@
     <field name="Velocity y" abbrev="v_y" type="fp32_t" unit="m/s">
       <description>
         The y-component of inertial velocity.
+      </description>
+    </field>
+    <field name="Velocity z" abbrev="v_z" type="fp32_t" unit="m/s">
+      <description>
+        The z-component of inertial velocity.
       </description>
     </field>
   </message>

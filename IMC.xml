@@ -11251,7 +11251,8 @@
         This field is ignored when a stop command is issued (i.e., stop will stop any ongoing experiment).
       </description>
       <value id="0" name="Curved Path Following" abbrev="PATH_FOLLOWING"/>
-      <value id="1" name="Distributed NSB" abbrev="NSB"/>
+      <value id="1" name="Distributed NSB, Ellipse Path" abbrev="NSB_ELLIPSE"/>
+      <value id="2" name="Distributed NSB, Waypoints" abbrev="NSB_WP"/>
     </field>
     <field name="Activate Obstacle" abbrev="obstacle" type="uint8_t" unit="Enumerated" enum-def="Boolean">
       <description>
@@ -11268,19 +11269,25 @@
 
   <message id="2025" name="NSB Parameters" abbrev="NSBParameters" source="vehicle,ccu" category="Guidance">
     <description>
-      Parameters of the NSB experiment that are shared among multiple vehicles.
+      Parameters of the NSB experiment that are shared among multiple entities.
     </description>
-    <field name="Path Latitude" abbrev="path_lat" type="fp64_t" unit="rad"> </field>
-    <field name="Path Longitude" abbrev="path_lon" type="fp64_t" unit="rad"> </field>
-    <field name="Path Depth" abbrev="path_z" type="fp64_t" unit="m"> </field>
-    <field name="Path Semimajor Axis" abbrev="path_a" type="fp64_t" unit="m"> </field>
-    <field name="Path Semiminor Axis" abbrev="path_b" type="fp64_t" unit="m"> </field>
-    <field name="Path Z Amplitude" abbrev="path_c" type="fp64_t" unit="m"> </field>
-    <field name="Path Clockwise" abbrev="path_clockwise" type="uint8_t" unit="Enumerated" enum-def="Boolean"> </field>
-    <field name="Path Orientation" abbrev="path_psi" type="fp64_t" unit="rad"> </field>
-    <field name="Path Z Frequency" abbrev="path_z_freq" type="fp64_t"> </field>
-    <field name="Path Initial Phase" abbrev="path_phi0" type="fp64_t" unit="rad"> </field>
-    <field name="Path Z Initial Phase" abbrev="path_z_phi0" type="fp64_t" unit="rad"> </field>
+    <field name="Ellipse Path Origin Latitude" abbrev="ellipse_path_lat" type="fp64_t" unit="rad"> </field>
+    <field name="Ellipse Path Origin Longitude" abbrev="ellipse_path_lon" type="fp64_t" unit="rad"> </field>
+    <field name="Ellipse Path Depth" abbrev="ellipse_path_z" type="fp64_t" unit="m"> </field>
+    <field name="Ellipse Path Semimajor Axis" abbrev="ellipse_path_a" type="fp64_t" unit="m"> </field>
+    <field name="Ellipse Path Semiminor Axis" abbrev="ellipse_path_b" type="fp64_t" unit="m"> </field>
+    <field name="Ellipse Path Z Amplitude" abbrev="ellipse_path_c" type="fp64_t" unit="m"> </field>
+    <field name="Ellipse Path Clockwise" abbrev="ellipse_path_clockwise" type="uint8_t" unit="Enumerated" enum-def="Boolean"> </field>
+    <field name="Ellipse Path Orientation" abbrev="ellipse_path_psi" type="fp64_t" unit="rad"> </field>
+    <field name="Ellipse Path Z Frequency" abbrev="ellipse_path_z_freq" type="fp64_t"> </field>
+    <field name="Ellipse Path Initial Phase" abbrev="ellipse_path_phi0" type="fp64_t" unit="rad"> </field>
+    <field name="Ellipse Path Z Initial Phase" abbrev="ellipse_path_z_phi0" type="fp64_t" unit="rad"> </field>
+    <field name="Waypoint Path Origin Latitude" abbrev="waypoint_path_lat" type="fp64_t" unit="rad"> </field>
+    <field name="Waypoint Path Origin Longitude" abbrev="waypoint_path_lon" type="fp64_t" unit="rad"> </field>
+    <field name="Waypoint Path Offset x" abbrev="waypoint_path_x" type="plaintext" unit="List"> </field>
+    <field name="Waypoint Path Offset y" abbrev="waypoint_path_y" type="plaintext" unit="List"> </field>
+    <field name="Waypoint Path Depth" abbrev="waypoint_path_z" type="plaintext" unit="List"> </field>
+    <field name="Waypoint Dubins Radius" abbrev="waypoint_radius" type="fp64_t" unit="m"> </field>
     <field name="LOS Lookahead Distance" abbrev="los_lookahead" type="fp64_t" unit="m"> </field>
     <field name="LOS Speed" abbrev="los_speed" type="fp64_t" unit="m/s"> </field>
     <field name="LOS Update Gain" abbrev="los_gain" type="fp64_t"> </field>
@@ -11293,10 +11300,12 @@
     <field name="Obstacle Avoidance Radius" abbrev="oa_radius" type="fp64_t" unit="m"> </field>
     <field name="Collision Cone Angle" abbrev="oa_cone" type="fp64_t" unit="rad"> </field>
     <field name="Obstacle Avoidance Hysteresis" abbrev="oa_hysteresis" type="fp64_t" unit="rad"> </field>
-    <field name="Obstacle Latitude" abbrev="obs_lat" type="fp64_t" unit="rad"> </field>
-    <field name="Obstacle Longitude" abbrev="obs_lon" type="fp64_t" unit="rad"> </field>
-    <field name="Obstacle Velocity x" abbrev="obs_vx" type="fp64_t" unit="m/s"> </field>
-    <field name="Obstacle Velocity y" abbrev="obs_vy" type="fp64_t" unit="m/s"> </field>
+    <field name="Obstacle Initial Latitude" abbrev="obs_lat" type="fp64_t" unit="rad"> </field>
+    <field name="Obstacle Initial Longitude" abbrev="obs_lon" type="fp64_t" unit="rad"> </field>
+    <field name="Obstacles Offset x" abbrev="obs_x" type="plaintext" unit="List"> </field>
+    <field name="Obstacles Offset y" abbrev="obs_y" type="plaintext" unit="List"> </field>
+    <field name="Obstacles Velocity x" abbrev="obs_vx" type="plaintext" unit="List"> </field>
+    <field name="Obstacles Velocity y" abbrev="obs_vy" type="plaintext" unit="List"> </field>
   </message>
 
   <message id="2026" name="NSB Parameters Request" abbrev="NSBParametersRequest" source="vehicle,ccu" category="Guidance">

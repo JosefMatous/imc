@@ -11300,6 +11300,7 @@
     <field name="Obstacle Avoidance Radius" abbrev="oa_radius" type="fp64_t" unit="m"> </field>
     <field name="Collision Cone Angle" abbrev="oa_cone" type="fp64_t" unit="rad"> </field>
     <field name="Obstacle Avoidance Hysteresis" abbrev="oa_hysteresis" type="fp64_t" unit="rad"> </field>
+    <field name="Obstacle Avoidance Recovery Angle" abbrev="oa_recovery" type="fp64_t" unit="rad"> </field>
     <field name="Obstacle Initial Latitude" abbrev="obs_lat" type="fp64_t" unit="rad"> </field>
     <field name="Obstacle Initial Longitude" abbrev="obs_lon" type="fp64_t" unit="rad"> </field>
     <field name="Obstacles Offset x" abbrev="obs_x" type="plaintext" unit="List"> </field>

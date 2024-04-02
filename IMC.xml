@@ -11257,4 +11257,16 @@
     </field>
   </message>
 
+  <message id="2030" name="Hand Position Input" abbrev="HandPosIn" source="vehicle" category="Guidance">
+    <description>Input into the hand-position output-linearizing controller. Depending on the controller level (kinematic/dyanmic), the input is either velocity or acceleration.</description>
+    <field name="Input Type" abbrev="type" type="uint8_t" unit="Bitfield" prefix="HAND_INPUT">
+      <description>Type of input.</description>
+      <value abbrev="VELOCITY" name="Velocity" id="0x01" />
+      <value abbrev="ACCELERATION" name="Acceleration" id="0x02" />
+    </field>
+    <field name="Input x" abbrev="x" type="fp64_t"></field>
+    <field name="Input y" abbrev="y" type="fp64_t"></field>
+    <field name="Input z" abbrev="z" type="fp64_t"></field>
+  </message>
+
 </messages>

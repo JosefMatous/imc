@@ -11257,16 +11257,40 @@
     </field>
   </message>
 
-  <message id="2030" name="Hand Position Input" abbrev="HandPosIn" source="vehicle" category="Guidance">
+  <message id="2030" name="Trajectory Reference" abbrev="TrajectoryReference" source="vehicle" category="Guidance">
+    <description>Trajectory reference (position, velocity, and acceleration) for the current timestamp. All variables are in the inertial coordinate frame.</description>
+    <field name="Position x" abbrev="r_x" type="fp64_t"></field>
+    <field name="Position y" abbrev="r_y" type="fp64_t"></field>
+    <field name="Position z" abbrev="r_z" type="fp64_t"></field>
+    <field name="Velocity x" abbrev="v_x" type="fp64_t"></field>
+    <field name="Velocity y" abbrev="v_y" type="fp64_t"></field>
+    <field name="Velocity z" abbrev="v_z" type="fp64_t"></field>
+    <field name="Acceleration x" abbrev="a_x" type="fp64_t"></field>
+    <field name="Acceleration y" abbrev="a_y" type="fp64_t"></field>
+    <field name="Acceleration z" abbrev="a_z" type="fp64_t"></field>    
+  </message>
+
+  <message id="2031" name="Hand Position Input" abbrev="HandPosIn" source="vehicle" category="Guidance">
     <description>Input into the hand-position output-linearizing controller. Depending on the controller level (kinematic/dyanmic), the input is either velocity or acceleration.</description>
     <field name="Input Type" abbrev="type" type="uint8_t" unit="Bitfield" prefix="HAND_INPUT">
       <description>Type of input.</description>
       <value abbrev="VELOCITY" name="Velocity" id="0x01" />
       <value abbrev="ACCELERATION" name="Acceleration" id="0x02" />
     </field>
-    <field name="Input x" abbrev="x" type="fp64_t"></field>
-    <field name="Input y" abbrev="y" type="fp64_t"></field>
-    <field name="Input z" abbrev="z" type="fp64_t"></field>
+    <field name="Input x" abbrev="u_x" type="fp64_t"></field>
+    <field name="Input y" abbrev="u_y" type="fp64_t"></field>
+    <field name="Input z" abbrev="u_z" type="fp64_t"></field>
+    <field name="Reference" abbrev="reference" type="message" message-type="TrajectoryReference"></field>
+  </message>
+
+  <message id="2032" name="Experiment Control" abbrev="ExperimentControl" source="vehicle,ccu" category="Guidance">
+    <description>Message for starting/stopping experiments.</description>
+    <field name="Start" abbrev="start" type="uint8_t" unit="Enumerated" enum-def="Boolean">
+      <description>True to start, false to stop.</description>
+    </field>
+    <field name="Delay" abbrev="delay" type="fp64_t" unit="s">
+      <description>Start/stop the experiment after a specified delay. Set to zero or negative to start/stop immediately.</description>
+    </field>
   </message>
 
 </messages>
